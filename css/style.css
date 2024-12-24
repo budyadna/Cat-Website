@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  background-color: #ddd;
+}
+
+/* Header Section Start*/
+/* Header */
+.header {
+  /* margin: 0 7%; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #eff3ea;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo Name */
+.header .logo-name {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+/* Navbar */
+.header .navbar {
+  display: flex;
+}
+
+.header .navbar .navbar-menu {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header .navbar .navbar-menu a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.1rem;
+  transition: color 0.3s ease-in;
+  font-weight: 500;
+}
+
+.header .navbar .navbar-menu a:hover {
+  color: blue;
+}
+
+/* Header Section End */
+
+/* Main Section Start */
+/* main */
+.main-content {
+  margin: 2rem 7%;
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* About */
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem 1rem;
+  scroll-margin-top: 50px;
+}
+
+.main-content .about-content {
+  max-width: 600px;
+}
+
+.about-title {
+  font-size: 5rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.cat-logo img {
+  width: 200px;
+  height: auto;
+  margin: 1rem 0;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.about-title {
+  font-size: 1.8rem;
+  color: #555;
+  line-height: 1.8;
+  margin-top: 1rem;
+}
+
+/* Cat Gallery */
+.cat-gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem 1rem;
+  scroll-margin-top: 40px;
+  margin-top: 5rem;
+}
+/* Main Section End */
