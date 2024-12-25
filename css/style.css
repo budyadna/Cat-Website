@@ -112,22 +112,34 @@ body {
 /* Cat Gallery */
 .cat-gallery {
   text-align: center;
-  padding: 2rem 1rem;
-  scroll-margin-top: 60px;
-  margin-top: 3rem;
+  padding: 2rem 0;
+}
+
+.gallery-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery-container {
+  display: flex;
+  transition: transform 0.3s ease;
+  -webkit-transition: transform 0.3s ease;
+  -moz-transition: transform 0.3s ease;
+  -ms-transition: transform 0.3s ease;
+  -o-transition: transform 0.3s ease;
+}
+
+.gallery-slide {
+  display: flex;
+  gap: 1.5rem;
+  flex: 0 0 100%;
+  justify-content: center;
 }
 
 .gallery-title {
   color: #555;
   font-size: 2rem;
   margin-bottom: 3rem;
-}
-
-.gallery-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  justify-content: space-between;
 }
 
 /* Card style */
@@ -165,34 +177,10 @@ body {
   color: #333;
 }
 
-/* Button Style */
-.slide-style {
-  display: flex;
-  gap: 1.5rem;
-  overflow: auto;
-  scroll-behavior: smooth;
-  overflow-x: auto;
-  padding-bottom: 1rem;
-}
-
-.slide-style::-webkit-scrollbar {
-  height: 8px;
-}
-
-.slide-style::-webkit-scrollbar-thumb {
-  background-color: #ccc;
-  border-radius: 4px;
-}
-
 /* Navigation Buttons */
-.gallery-wrapper {
-  position: relative;
-}
-
 .slide-btn {
   position: absolute;
   top: 50%;
-  transform: translateY(800%);
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
   border: none;
@@ -201,6 +189,11 @@ body {
   height: 40px;
   cursor: pointer;
   z-index: 10;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
 }
 
 .left-btn {
