@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Poppins", Arial, Helvetica, sans-serif;
   background-color: #ddd;
@@ -28,7 +32,7 @@ body {
 
 /* Logo Name */
 .header .logo-name {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 700;
 }
 
@@ -62,7 +66,7 @@ body {
 /* Main Section Start */
 /* main */
 .main-content {
-  margin: 2rem 7%;
+  margin: 1rem 7%;
   padding: 1rem 0;
   display: flex;
   flex-direction: column;
@@ -76,7 +80,8 @@ body {
   align-items: center;
   text-align: center;
   padding: 2rem 1rem;
-  scroll-margin-top: 50px;
+  scroll-margin-top: 60px;
+  margin-bottom: 2rem;
 }
 
 .main-content .about-content {
@@ -84,7 +89,7 @@ body {
 }
 
 .about-title {
-  font-size: 5rem;
+  font-size: 3rem;
   margin-bottom: 0.5rem;
   color: #333;
 }
@@ -106,12 +111,107 @@ body {
 
 /* Cat Gallery */
 .cat-gallery {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   text-align: center;
   padding: 2rem 1rem;
-  scroll-margin-top: 40px;
-  margin-top: 5rem;
+  scroll-margin-top: 60px;
+  margin-top: 3rem;
+}
+
+.gallery-title {
+  color: #555;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+
+.gallery-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: space-between;
+}
+
+/* Card style */
+.card {
+  flex: 1 1 calc(33.333% - 1.5rem);
+  max-width: calc(33.333% - 1.5rem);
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-info {
+  padding: 1rem;
+  text-align: center;
+}
+
+.cat-name {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0.5rem 0 0;
+  color: #333;
+}
+
+/* Button Style */
+.slide-style {
+  display: flex;
+  gap: 1.5rem;
+  overflow: auto;
+  scroll-behavior: smooth;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+}
+
+.slide-style::-webkit-scrollbar {
+  height: 8px;
+}
+
+.slide-style::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 4px;
+}
+
+/* Navigation Buttons */
+.gallery-wrapper {
+  position: relative;
+}
+
+.slide-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(800%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.left-btn {
+  left: 0;
+}
+
+.right-btn {
+  right: 0;
+}
+
+.hidden {
+  visibility: hidden;
 }
 /* Main Section End */
