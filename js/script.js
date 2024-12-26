@@ -1,29 +1,35 @@
-const galleryContainer = document.querySelector(".gallery-container");
-const slides = document.querySelectorAll(".gallery-slide");
-const leftBtn = document.querySelector(".left-btn");
-const rightBtn = document.querySelector(".right-btn");
+const Slides = document.querySelectorAll(".slide");
+const dots = document.querySelectorAll(".dot");
+const prevButton = document.querySelector(".prev");
+const nextButton = document.querySelector(".next");
 
-let currentIndex = 0;
+let currentSlide = 0;
 
-const updateButtons = () => {
-  leftBtn.classList.toggle("hidden", currentIndex === 0);
-  rightBtn.classList.toggle("hidden", currentIndex === slides.length - 1);
-};
+// Fungsi untuk menampilkan slide
+function showSlides(index) {
+  if (index >= Slides.length) currentSlide = 0;
+  else if (index < 0) currentSlide = Slides.length - 1;
+  else currentSlide = index;
 
-leftBtn.addEventListener("click", () => {
-  if (currentIndex > 0) {
-    currentIndex--;
-    galleryContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
-    updateButtons();
-  }
+  // Geser slide
+  const offset = -currentSlide * 100;
+  document.querySelector(
+    ".gallery-container"
+  ).style.transform = `translateX(${offset}%)`;
+
+  // Update active dot
+  dots.forEach((dot) => dot.classList.remove("active"));
+  dots[currentSlide].classList.add("active");
+}
+
+// Tombol navigasi
+prevButton.addEventListener("click", () => showSlides(currentSlide - 1));
+nextButton.addEventListener("click", () => showSlides(currentSlide + 1));
+
+// Klik pada dot
+dots.forEach((dot, index) => {
+  dot.addEventListener("click", () => showSlides(index));
 });
 
-rightBtn.addEventListener("click", () => {
-  if (currentIndex < slides.length - 1) {
-    currentIndex++;
-    galleryContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
-    updateButtons();
-  }
-});
-
-updateButtons();
+// Slide pertama
+showSlides(0);
