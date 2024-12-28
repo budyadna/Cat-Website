@@ -12,7 +12,6 @@ html {
 
 body {
   font-family: "Poppins", Arial, Helvetica, sans-serif;
-  background-color: #ddd;
 }
 
 /* Header Section Start*/
@@ -67,9 +66,10 @@ body {
 /* Main Section Start */
 /* main */
 .main-content {
-  padding: 1rem 0;
   display: flex;
   flex-direction: column;
+  /* background-color: aqua; */
+  margin: 2rem 10%;
 }
 
 /* About Start */
@@ -80,7 +80,6 @@ body {
   text-align: center;
   padding: 2rem 1rem;
   scroll-margin-top: 60px;
-  margin: 3rem 10%;
 }
 
 .main-content .about-content {
@@ -98,7 +97,37 @@ body {
 .about-title {
   font-size: 1.8rem;
   color: #333;
-  margin-top: 1rem;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+
+.about-text {
+  margin-top: 2rem;
+  font-size: 1.2rem;
+}
+
+.fun-facts {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.fun-facts h2 {
+  color: #555;
+}
+.fun-facts ul li {
+  list-style: none;
+  padding: 8px 0;
+  position: relative;
+}
+
+.fun-facts ul li::before {
+  content: "🐾";
+  position: absolute;
+  left: -45px;
 }
 
 /* About End */
@@ -109,7 +138,8 @@ body {
   flex-direction: column;
   align-items: center;
   scroll-margin-top: 60px;
-  margin: 3rem 7%;
+  margin: 5rem 0;
+  justify-content: center;
 }
 
 .gallery-title {
@@ -178,7 +208,7 @@ body {
   justify-content: space-between;
   align-items: center;
   position: absolute;
-  bottom: -1100px;
+  bottom: -100%;
   left: 0;
   right: 0;
   margin: 0 10%;
@@ -218,83 +248,136 @@ button.next:hover {
   background: #333;
 }
 /* Cat Gallery End */
-/* Contact Start */
-.contact {
-  text-align: center;
-  padding: 2rem 1rem;
+/* FAQ Start */
+.faq {
+  padding: 2rem;
+  max-width: 100%;
+  margin: 5rem auto;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
   background-color: #f9f9f9;
-  scroll-margin-top: 60px;
 }
 
-.contact-title {
+.faq-title {
+  text-align: center;
+  font-weight: 700;
   color: #333;
-  font-size: 1.8rem;
-  margin-top: 1rem;
-}
-
-.contact-text {
-  margin: 1rem 0 2rem 0;
-}
-
-.contact-form {
-  max-width: 500px;
-  margin: 0 auto 2rem;
-  padding: 1rem;
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-}
-
-.form-group {
+  font-size: 2rem;
   margin-bottom: 1rem;
-  text-align: left;
 }
 
-.form-group label {
-  display: block;
-  font-size: 0.9rem;
-  margin-bottom: 0.5rem;
-  color: #333;
-}
-
-.form-group input,
-.form-group textarea {
-  width: 100%;
-  padding: 0.8rem;
+.faq-text {
+  text-align: center;
+  margin-bottom: 3rem;
   font-size: 1rem;
+}
+
+.faq-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.faq-item {
+  background-color: #fff;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  padding: 1.5rem;
   border: 1px solid #ddd;
-  border-radius: 5px;
-  outline: none;
+  transform: box-shadow 0.3s ease;
+  -webkit-transform: box-shadow 0.3s ease;
+  -moz-transform: box-shadow 0.3s ease;
+  -ms-transform: box-shadow 0.3s ease;
+  -o-transform: box-shadow 0.3s ease;
 }
 
-.form-group input:focus,
-.form-group textarea:focus {
-  border-color: #0077cc;
+.faq-item:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.btn-submit {
-  display: block;
-  width: 100%;
-  padding: 0.8rem;
-  font-size: 1rem;
-  background-color: #0077cc;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
+.faq-item h3 {
+  font-size: 1.3rem;
+  color: #555;
+  margin-bottom: 0.5rem;
   cursor: pointer;
 }
 
-.btn-submit:hover {
-  background-color: #005fa3;
-}
-
-.social-links {
-  margin-top: 2rem;
-}
-
-.social-links p {
+.faq-answer {
   font-size: 1rem;
-  margin-bottom: 1rem;
+  color: #444;
+  line-height: 1.6;
+  display: none;
 }
-/* Contact End */
+
+.faq-item.open .faq-answer {
+  display: block;
+}
+
+/* FAQ End */
+
+/* Footer Start */
+.footer {
+  background-color: #333;
+  text-align: center;
+  color: #fff;
+  padding: 1.5rem 1rem;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer-text {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.footer-links {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer-link {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.social-icon {
+  color: #fff;
+}
+
+.footer-contact {
+  margin-top: 0.9rem;
+  font-size: 0.9rem;
+}
+
+.footer-contact a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* Footer End */
 /* Main Section End */

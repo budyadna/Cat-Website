@@ -6,6 +6,9 @@
     <title>Biodata Kucing</title>
     <!-- My style -->
     <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Feather Icon -->
+    <script src="https://unpkg.com/feather-icons"></script>
   </head>
   <body>
     <!-- Header Start -->
@@ -15,7 +18,7 @@
         <ul class="navbar-menu">
           <li><a href="#about">About</a></li>
           <li><a href="#cat-gallery">Cat Gallery</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#faq">FAQ</a></li>
         </ul>
       </nav>
     </header>
@@ -31,9 +34,19 @@
             <img src="assets/img/catlogo.jpg" alt="cat logo" />
           </div>
           <p class="about-text">
-            Welcome to Living Cat! Explore car profiles and learn more about
-            your favorite felines.
+            Welcome to Living Cat! Explore cat profile and learn more about your
+            favorite felines.
           </p>
+
+          <div class="fun-facts">
+            <h2>Did you know?</h2>
+            <p>Here are some amazing cat facts:</p>
+            <ul>
+              <li>Cats sleep for 70% of their lives.</li>
+              <li>The world's oldest cat lived to be 38 years old!</li>
+              <li>Cats can retote their ears 180 degrees.</li>
+            </ul>
+          </div>
         </div>
       </section>
       <!-- About Section End -->
@@ -716,49 +729,57 @@
       <!-- Cat Gallery Section End -->
 
       <!-- Contact Section Start -->
-      <section class="contact" id="contact">
-        <h2 class="contact-title">Contact Us</h2>
-        <p class="contact-text">
-          If you'd like to learn more, feel free to reach out to us at form
-          email below
+      <section class="faq" id="faq">
+        <h2 class="faq-title">Frequently Asked Question</h2>
+        <p class="faq-text">
+          Have questions about cats? Find the answer below!
         </p>
-        <form action="#" class="contact-form" method="post">
-          <div class="form-group">
-            <label for="name">Name</label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              placeholder="Your Name"
-              required
-            />
+        <!-- FAQ Container -->
+        <div class="faq-container">
+          <!-- Question 1 -->
+          <div class="faq-item">
+            <h3>Why do cats knead with their paws?</h3>
+            <p class="faq-answer">
+              Cats knead with their paws as a comforting behavior that dates
+              back to kittenhood when they kneaded their mothers to stimulate
+              milk flow. Adult cats may continue kneading as a way to show
+              affection or to mark their territory.
+            </p>
           </div>
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input
-              type="email"
-              name="email"
-              placeholder="Your Email"
-              required
-            />
+          <!-- Question 1 -->
+
+          <!-- Question 2 -->
+          <div class="faq-item">
+            <h3>How can i tell if my cat is happy?</h3>
+            <p class="faq-answer">
+              A happy cat will exhibit behaviors like purring, slow blinking,
+              rubbing against you, and holding their tail upright. They may also
+              play actively and seek out your company.
+            </p>
           </div>
-          <div class="form-group">
-            <label for="message">message</label>
-            <textarea
-              name="message"
-              id="message"
-              placeholder="Your message"
-              rows="5"
-              required
-            ></textarea>
+          <!-- Question 2 -->
+
+          <!-- Question 3 -->
+          <div class="faq-item">
+            <h3>What foods are dangerous for cats?</h3>
+            <p class="faq-answer">
+              Foods such as chocolate, onions, garlic, grapes, and raisins are
+              toxic to cats. Additionally, avoid feeding them bones, raw meat,
+              or anything seasoned with salt or spices.
+            </p>
           </div>
-          <button type="submit" class="submit-btn">Send Message</button>
-        </form>
-        <div class="social-links">
-          <p>Follow us on:</p>
-          <a href="">Instagram</a>
-          <a href="">X</a>
-          <a href="">Facebook</a>
+          <!-- Question 3 -->
+
+          <!-- Question 4 -->
+          <div class="faq-item">
+            <h3>How often should i take my cat to the vet?</h3>
+            <p class="faq-answer">
+              It is recommended to take your cat to the vet at least once a year
+              for a general check-up. For kittens and senior cats, more frequent
+              visits may be necessary to monitor their health.
+            </p>
+          </div>
+          <!-- Question 4 -->
         </div>
       </section>
       <!-- Contact Section End -->
@@ -767,11 +788,45 @@
 
     <!-- Footer Start -->
     <footer class="footer" id="footer">
-      <p>&copy; 2024 Living Cat. All rights reserved</p>
+      <div class="footer-container">
+        <!-- Copyright -->
+        <p class="footer-text">&copy; 2024 Living Cat. All rights reserved</p>
+
+        <!-- Quick Links -->
+        <div class="footer-links">
+          <a href="#about" class="footer-link">Home</a>
+          <a href="#cat-gallery" class="footer-link">Cat Gallery</a>
+          <a href="#faq" class="footer-link">FAQ</a>
+        </div>
+
+        <!-- Social Media Icons -->
+        <div class="footer-socials">
+          <a href="#" class="social-icon" target="_blank" aria-label="Facebook"
+            ><i data-feather="facebook"></i
+          ></a>
+          <a href="#" class="social-icon" target="_blank" aria-label="Twitter"
+            ><i data-feather="twitter"></i
+          ></a>
+          <a href="#" class="social-icon" target="_blank" aria-label="Instagram"
+            ><i data-feather="instagram"></i
+          ></a>
+        </div>
+
+        <!-- Email Link -->
+        <p class="footer-contact">
+          Contact us at:
+          <a href="mailto:budyadnayahya@gmail.com">budyadnayahya@gmail.com</a>
+        </p>
+      </div>
     </footer>
     <!-- Footer End -->
 
     <!-- Javascript -->
     <script src="js/script.js"></script>
+
+    <!-- Feather Javascript -->
+    <script>
+      feather.replace();
+    </script>
   </body>
 </html>

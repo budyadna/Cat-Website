@@ -33,3 +33,12 @@ dots.forEach((dot, index) => {
 
 // Slide pertama
 showSlides(0);
+
+// FAQ Section
+// Menampilan jawab pada FAQ
+document.querySelectorAll(".faq-item h3").forEach((question) => {
+  question.addEventListener("click", () => {
+    const faqItem = question.parentElement;
+    faqItem.classList.toggle("open");
+  });
+});
