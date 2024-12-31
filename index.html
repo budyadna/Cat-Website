@@ -12,28 +12,27 @@
   </head>
   <body>
     <!-- Header Start -->
-    <header class="header" class="header">
-      <h2 class="logo-name">Living Cat</h2>
-      <nav class="navbar">
-        <ul class="navbar-menu">
-          <li><a href="#about">About</a></li>
-          <li><a href="#cat-gallery">Cat Gallery</a></li>
-          <li><a href="#faq">FAQ</a></li>
-        </ul>
-      </nav>
-    </header>
+    <nav class="navbar" id="navbar">
+      <h2 class="logo-name">
+        <a href="#home"><span>Living</span> Cat</a>
+      </h2>
+      <ul class="navbar-menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#cat-gallery">Cat Gallery</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </nav>
     <!-- Header End -->
 
-    <!-- Main Content Start -->
-    <main class="main-content" id="main-content">
-      <!-- About Section Start -->
-      <section class="about" id="about">
-        <div class="about-content">
-          <h3 class="about-title">All About Cats</h3>
+    <!-- About Section Start -->
+    <section class="home" id="home">
+      <main class="main-content" id="main-content">
+        <div class="home-content">
+          <h3 class="home-title">All About Cats</h3>
           <div class="cat-logo">
             <img src="assets/img/catlogo.jpg" alt="cat logo" />
           </div>
-          <p class="about-text">
+          <p class="home-text">
             Welcome to Living Cat! Explore cat profile and learn more about your
             favorite felines.
           </p>
@@ -48,11 +47,13 @@
             </ul>
           </div>
         </div>
-      </section>
-      <!-- About Section End -->
+      </main>
+    </section>
+    <!-- About Section End -->
 
-      <!-- Cat Gallery Section Start -->
-      <section class="cat-gallery" id="cat-gallery">
+    <!-- Cat Gallery Section Start -->
+    <section class="cat-gallery" id="cat-gallery">
+      <main class="main-gallery">
         <h3 class="gallery-title">Learn About Cats</h3>
         <p class="gallery-text">
           We provide you a lot of cats' data to learn if you want to adopt them
@@ -725,66 +726,63 @@
           <button class="next">❯</button>
         </div>
         <!-- Navigasi End -->
-      </section>
-      <!-- Cat Gallery Section End -->
+      </main>
+    </section>
+    <!-- Cat Gallery Section End -->
 
-      <!-- Contact Section Start -->
-      <section class="faq" id="faq">
-        <h2 class="faq-title">Frequently Asked Question</h2>
-        <p class="faq-text">
-          Have questions about cats? Find the answer below!
-        </p>
-        <!-- FAQ Container -->
-        <div class="faq-container">
-          <!-- Question 1 -->
-          <div class="faq-item">
-            <h3>Why do cats knead with their paws?</h3>
-            <p class="faq-answer">
-              Cats knead with their paws as a comforting behavior that dates
-              back to kittenhood when they kneaded their mothers to stimulate
-              milk flow. Adult cats may continue kneading as a way to show
-              affection or to mark their territory.
-            </p>
-          </div>
-          <!-- Question 1 -->
-
-          <!-- Question 2 -->
-          <div class="faq-item">
-            <h3>How can i tell if my cat is happy?</h3>
-            <p class="faq-answer">
-              A happy cat will exhibit behaviors like purring, slow blinking,
-              rubbing against you, and holding their tail upright. They may also
-              play actively and seek out your company.
-            </p>
-          </div>
-          <!-- Question 2 -->
-
-          <!-- Question 3 -->
-          <div class="faq-item">
-            <h3>What foods are dangerous for cats?</h3>
-            <p class="faq-answer">
-              Foods such as chocolate, onions, garlic, grapes, and raisins are
-              toxic to cats. Additionally, avoid feeding them bones, raw meat,
-              or anything seasoned with salt or spices.
-            </p>
-          </div>
-          <!-- Question 3 -->
-
-          <!-- Question 4 -->
-          <div class="faq-item">
-            <h3>How often should i take my cat to the vet?</h3>
-            <p class="faq-answer">
-              It is recommended to take your cat to the vet at least once a year
-              for a general check-up. For kittens and senior cats, more frequent
-              visits may be necessary to monitor their health.
-            </p>
-          </div>
-          <!-- Question 4 -->
+    <!-- Contact Section Start -->
+    <section class="faq" id="faq">
+      <h2 class="faq-title">Frequently Asked Question</h2>
+      <p class="faq-text">Have questions about cats? Find the answer below!</p>
+      <!-- FAQ Container -->
+      <div class="faq-container">
+        <!-- Question 1 -->
+        <div class="faq-item">
+          <h3>Why do cats knead with their paws?</h3>
+          <p class="faq-answer">
+            Cats knead with their paws as a comforting behavior that dates back
+            to kittenhood when they kneaded their mothers to stimulate milk
+            flow. Adult cats may continue kneading as a way to show affection or
+            to mark their territory.
+          </p>
         </div>
-      </section>
-      <!-- Contact Section End -->
-    </main>
-    <!-- Main Content End -->
+        <!-- Question 1 -->
+
+        <!-- Question 2 -->
+        <div class="faq-item">
+          <h3>How can i tell if my cat is happy?</h3>
+          <p class="faq-answer">
+            A happy cat will exhibit behaviors like purring, slow blinking,
+            rubbing against you, and holding their tail upright. They may also
+            play actively and seek out your company.
+          </p>
+        </div>
+        <!-- Question 2 -->
+
+        <!-- Question 3 -->
+        <div class="faq-item">
+          <h3>What foods are dangerous for cats?</h3>
+          <p class="faq-answer">
+            Foods such as chocolate, onions, garlic, grapes, and raisins are
+            toxic to cats. Additionally, avoid feeding them bones, raw meat, or
+            anything seasoned with salt or spices.
+          </p>
+        </div>
+        <!-- Question 3 -->
+
+        <!-- Question 4 -->
+        <div class="faq-item">
+          <h3>How often should i take my cat to the vet?</h3>
+          <p class="faq-answer">
+            It is recommended to take your cat to the vet at least once a year
+            for a general check-up. For kittens and senior cats, more frequent
+            visits may be necessary to monitor their health.
+          </p>
+        </div>
+        <!-- Question 4 -->
+      </div>
+    </section>
+    <!-- Contact Section End -->
 
     <!-- Footer Start -->
     <footer class="footer" id="footer">

@@ -14,34 +14,34 @@ body {
   font-family: "Poppins", Arial, Helvetica, sans-serif;
 }
 
-/* Header Section Start*/
-/* Header */
-.header {
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5rem 0;
+  padding: 0.5rem 10%;
   position: sticky;
   top: 0;
   z-index: 1000;
-  background-color: #eff3ea;
+  background-color: #f8fafc;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Logo Name */
-.header .logo-name {
-  font-size: 2rem;
-  font-weight: 700;
-  margin-left: 10%;
+.logo-name {
+  font-size: 2.3rem;
+  font-weight: 800;
 }
 
-/* Navbar */
-.header .navbar {
-  display: flex;
-  margin: 8px 10%;
+.logo-name a {
+  text-decoration: none;
+  color: #9aa6b2;
 }
 
-.header .navbar .navbar-menu {
+.logo-name a span {
+  color: #555;
+  font-style: italic;
+}
+
+.navbar-menu {
   display: flex;
   gap: 2rem;
   list-style: none;
@@ -49,7 +49,7 @@ body {
   padding: 0;
 }
 
-.header .navbar .navbar-menu a {
+.navbar-menu a {
   text-decoration: none;
   color: black;
   font-size: 1.1rem;
@@ -57,33 +57,26 @@ body {
   font-weight: 500;
 }
 
-.header .navbar .navbar-menu a:hover {
+.navbar-menu a:hover {
   color: blue;
 }
 
-/* Header Section End */
-
-/* Main Section Start */
-/* main */
-.main-content {
-  display: flex;
-  flex-direction: column;
-  /* background-color: aqua; */
-  margin: 2rem 10%;
+/* home Start */
+.home {
+  scroll-margin-top: 60px;
+  background-color: #d9eafd;
+  width: 100%;
+  height: 94vh;
+  padding: 3rem 10%;
 }
 
-/* About Start */
-.about {
+.main-content {
+  width: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 2rem 1rem;
-  scroll-margin-top: 60px;
-}
-
-.main-content .about-content {
-  max-width: 1200px;
 }
 
 .cat-logo img {
@@ -94,16 +87,17 @@ body {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.about-title {
-  font-size: 1.8rem;
+.home-title {
+  font-size: 2rem;
   color: #333;
   margin-top: 3rem;
   margin-bottom: 2rem;
 }
 
-.about-text {
+.home-text {
   margin-top: 2rem;
   font-size: 1.2rem;
+  color: #000000;
 }
 
 .fun-facts {
@@ -133,28 +127,34 @@ body {
 /* About End */
 /* Cat Gallery Start*/
 .cat-gallery {
-  padding: 2rem 1rem;
+  padding: 3rem 10%;
+  scroll-margin-top: 60px;
+  width: 100%;
+}
+
+.main-gallery {
   display: flex;
   flex-direction: column;
   align-items: center;
-  scroll-margin-top: 60px;
-  margin: 5rem 0;
   justify-content: center;
+  margin: 2rem 0;
 }
 
 .gallery-title {
   color: #333;
-  font-size: 1.8rem;
+  font-size: 2rem;
   margin-top: 1rem;
 }
 
 .gallery-text {
   margin: 1rem 0 2rem 0;
+  font-size: 1rem;
 }
 
 .gallery-slider {
   max-width: 1200px;
-  margin: auto;
+  width: 100%;
+  margin-left: 3rem;
   overflow: hidden;
   position: relative;
 }
@@ -208,10 +208,10 @@ body {
   justify-content: space-between;
   align-items: center;
   position: absolute;
-  bottom: -100%;
+  bottom: -110%;
   left: 0;
   right: 0;
-  margin: 0 10%;
+  padding: 0 10%;
   box-sizing: border-box;
 }
 
@@ -251,8 +251,8 @@ button.next:hover {
 /* FAQ Start */
 .faq {
   padding: 2rem;
-  max-width: 100%;
-  margin: 5rem auto;
+  width: 100%;
+  margin: 6rem auto;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   -webkit-border-radius: 8px;
@@ -260,6 +260,7 @@ button.next:hover {
   -ms-border-radius: 8px;
   -o-border-radius: 8px;
   background-color: #f9f9f9;
+  padding: 3rem 10%;
 }
 
 .faq-title {
@@ -280,6 +281,9 @@ button.next:hover {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
 }
 
 .faq-item {
@@ -319,7 +323,6 @@ button.next:hover {
 .faq-item.open .faq-answer {
   display: block;
 }
-
 /* FAQ End */
 
 /* Footer Start */
